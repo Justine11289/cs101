@@ -25,6 +25,7 @@ int main(){
     FILE* fp_user;
     FILE* fp_record;
     int count[]={1};
+
     if((fp_bin=fopen("count.bin","rb")) != NULL){
         fread(count, sizeof(count), 1 ,fp_bin);
         fclose(fp_bin);
@@ -114,7 +115,6 @@ int main(){
         printf("已為您購買的%d組樂透組合輸出至%s\n",group,filename);
         fclose(fp_txt);
 
-    
         record.lotto_no = count[0];
         record.lotto_receipt = group * 50 * 1.1;
         record.emp_id = user_id[0];
