@@ -13,13 +13,13 @@ int _div(int x, int y){
     return x/y;
 }
 int _power(int x,int y){
-    //if(y == 0){return 1;}
-    //else return x*(_power(x,y-1));
-    int pow = 1;
-    for(int i = 0; i < y; i++){
-        pow *= x;
-    }
-    return pow;
+    if(y == 1){return x;}
+    else return x*(_power(x,y-1));
+//     int pow = 1;
+//     for(int i = 0; i < y; i++){
+//         pow *= x;
+//     }
+//     return pow;
 }
 
 int main(){
